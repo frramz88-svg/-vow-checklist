@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<title>VOW Checklist</title>
+<style>
+:root{--bg:#0b0d10;--card:#171a1f;--border:#323843;--text:#fff;--muted:#aab2bd;--green:#187d3e;--yellow:#d09b00;--red:#b93434}
+*{box-sizing:border-box}
+html,body{margin:0;background:var(--bg);color:var(--text);font-family:-apple-system,BlinkMacSystemFont,"SF Pro Text","Segoe UI",Arial,sans-serif;-webkit-text-size-adjust:100%}
+body{min-height:100vh;min-height:100dvh}
+main{width:min(100%,1000px);margin:auto;padding:calc(22px + env(safe-area-inset-top)) 14px calc(112px + env(safe-area-inset-bottom))}
+h1{margin:0 0 7px;font-size:28px}.intro{margin:0 0 24px;color:var(--muted);font-size:14px;line-height:1.45}
+h2{margin:25px 2px 9px;color:var(--muted);font-size:12px;letter-spacing:.14em}
+.grid{display:grid;grid-template-columns:1fr;gap:8px}
+.check{
+ appearance:none;-webkit-appearance:none;width:100%;min-height:58px;margin:0;border:1px solid var(--border);
+ border-radius:12px;background:var(--card);color:var(--text);padding:14px;display:flex;align-items:center;
+ justify-content:space-between;gap:12px;text-align:left;font:inherit;cursor:pointer;
+}
+.check .label{font-size:15px;font-weight:650;line-height:1.25;pointer-events:none}
+.check .status{font-size:10px;font-weight:900;letter-spacing:.04em;white-space:nowrap;pointer-events:none}
+.check[data-state="1"]{background:var(--green);border-color:#3ca960}
+.check[data-state="2"]{background:var(--yellow);border-color:#efbd2e;color:#111}
+.check[data-state="3"]{background:var(--red);border-color:#df5757}
+.check:active{opacity:.82}
+footer{position:fixed;z-index:99;left:0;right:0;bottom:0;padding:28px 14px calc(14px + env(safe-area-inset-bottom));background:linear-gradient(transparent,rgba(11,13,16,.99) 34%)}
+#finish{appearance:none;-webkit-appearance:none;display:block;width:min(100%,972px);margin:auto;min-height:56px;border:0;border-radius:13px;background:#f5f6f7;color:#111;font-size:15px;font-weight:900;letter-spacing:.06em;cursor:pointer}
+@media(min-width:768px){main{padding-left:26px;padding-right:26px}.grid{grid-template-columns:repeat(2,minmax(0,1fr));gap:10px}.check{min-height:64px;padding:16px}footer{padding-left:26px;padding-right:26px}}
+</style>
+</head>
+<body>
+<main>
+<h1>Checklist de diagnóstico</h1>
+<p class="intro">Toca o haz clic en una fila: 1 = verde · 2 = amarillo · 3 = rojo · 4 = pendiente.</p>
+<h2>PRINCIPAL</h2><div class="grid"><button type="button" class="check" data-state="0"><span class="label">Diagnóstico en PC “números de serie”</span><span class="status">PENDIENTE</span></button><button type="button" class="check" data-state="0"><span class="label">Agitar equipo para adherencia de batería</span><span class="status">PENDIENTE</span></button><button type="button" class="check" data-state="0"><span class="label">Probar chip físicamente</span><span class="status">PENDIENTE</span></button><button type="button" class="check" data-state="0"><span class="label">IMEI</span><span class="status">PENDIENTE</span></button><button type="button" class="check" data-state="0"><span class="label">Face ID</span><span class="status">PENDIENTE</span></button><button type="button" class="check" data-state="0"><span class="label">Puerto de carga en PC</span><span class="status">PENDIENTE</span></button><button type="button" class="check" data-state="0"><span class="label">Audio en video de cámara trasera</span><span class="status">PENDIENTE</span></button><button type="button" class="check" data-state="0"><span class="label">“Sin restricciones de red”</span><span class="status">PENDIENTE</span></button><button type="button" class="check" data-state="0"><span class="label">Cámaras a contra luz</span><span class="status">PENDIENTE</span></button><button type="button" class="check" data-state="0"><span class="label">Detalles en pantalla blanca/negra</span><span class="status">PENDIENTE</span></button><button type="button" class="check" data-state="0"><span class="label">Tornillos sin signos de desgaste</span><span class="status">PENDIENTE</span></button><button type="button" class="check" data-state="0"><span class="label">Panicfull</span><span class="status">PENDIENTE</span></button><button type="button" class="check" data-state="0"><span class="label">Piezas cambiadas en general</span><span class="status">PENDIENTE</span></button><button type="button" class="check" data-state="0"><span class="label">Sonido de ambos parlantes</span><span class="status">PENDIENTE</span></button><button type="button" class="check" data-state="0"><span class="label">Arrastrar icono por la pantalla</span><span class="status">PENDIENTE</span></button><button type="button" class="check" data-state="0"><span class="label">Linterna</span><span class="status">PENDIENTE</span></button><button type="button" class="check" data-state="0"><span class="label">Botones</span><span class="status">PENDIENTE</span></button><button type="button" class="check" data-state="0"><span class="label">True Tone</span><span class="status">PENDIENTE</span></button><button type="button" class="check" data-state="0"><span class="label">Taptic Engine</span><span class="status">PENDIENTE</span></button><button type="button" class="check" data-state="0"><span class="label">Cargarlo desde el inicio</span><span class="status">PENDIENTE</span></button></div>
+<h2>SECUNDARIO</h2><div class="grid"><button type="button" class="check" data-state="0"><span class="label">Estético</span><span class="status">PENDIENTE</span></button><button type="button" class="check" data-state="0"><span class="label">Cámaras</span><span class="status">PENDIENTE</span></button><button type="button" class="check" data-state="0"><span class="label">Imei caja</span><span class="status">PENDIENTE</span></button><button type="button" class="check" data-state="0"><span class="label">SIM FÍSICA</span><span class="status">PENDIENTE</span></button><button type="button" class="check" data-state="0"><span class="label">Almacenamiento</span><span class="status">PENDIENTE</span></button><button type="button" class="check" data-state="0"><span class="label">Condición de batería</span><span class="status">PENDIENTE</span></button></div>
+</main>
+<footer><button type="button" id="finish">FINISH · LIMPIAR CHECKLIST</button></footer>
+
+<script>
+(function () {
+  "use strict";
+  var names = ["PENDIENTE","OK","REVISAR","PROBLEMA"];
+
+  // Event delegation with the native click event.
+  // On iOS Safari, a tap on a native <button> generates click reliably.
+  document.addEventListener("click", function (event) {
+    var button = event.target.closest ? event.target.closest(".check") : null;
+    if (button) {
+      var state = (parseInt(button.getAttribute("data-state"),10) + 1) % 4;
+      button.setAttribute("data-state", String(state));
+      button.querySelector(".status").textContent = names[state];
+      return;
+    }
+
+    if (event.target.id === "finish") {
+      var buttons = document.querySelectorAll(".check");
+      for (var i=0; i<buttons.length; i++) {
+        buttons[i].setAttribute("data-state","0");
+        buttons[i].querySelector(".status").textContent=names[0];
+      }
+      window.scrollTo(0,0);
+    }
+  }, false);
+})();
+</script>
+</body>
+</html>
